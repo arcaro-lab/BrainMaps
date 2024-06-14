@@ -34,11 +34,11 @@ The data are 4D (x, y, z, functional maps) and include the following sub-briks:
 ### Axial View
 ![Axial View](images/retino_axial.png)
 
-### Folded NMT Cortical Surface
-![Folded NMT Cortical Surface](images/retino_folded.png)
+### Folded NMT Cortical Surface (1/2 Size)
+<img src="images/retino_folded.png" alt="Folded NMT Cortical Surface" width="50%" />
 
-### Inflated NMT Cortical Surface
-![Inflated NMT Cortical Surface](images/retino_inflated.png)
+### Inflated NMT Cortical Surface (1/2 Size)
+<img src="images/retino_inflated.png" alt="Inflated NMT Cortical Surface" width="50%" />
 
 ## References
 - Arcaro MJ, Pinsk MA, Li X, Kastner S. (2017). The Anatomical and Functional Organization of the Human Visual Pulvinar. Journal of Neuroscience. 37(33): 7863-7874. [PubMed](https://pubmed.ncbi.nlm.nih.gov/28674177/).
