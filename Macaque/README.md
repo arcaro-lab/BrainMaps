@@ -11,14 +11,15 @@ Below illustrates how to register these functional maps to your monkey's T1 MRI.
 - `<target_image>`: Path to the target image (your monkey's T1 MRI).
 - `<moving_image>`: Path to the moving image (default: `moving_image.nii.gz`).
 - `<functional_map>`: Path to the functional map (default: `functional_map.nii.gz`).
+- `<functional_resolution>`: Resolution of functional map (default: 1x1x1mm).
 
 ## Steps
 
 1. **Downsample Images**: The script downscales both the moving and target images to match the resolution of the functional map (1x1x1 mm).
 
     ```
-    3dresample -dxyz 1 1 1 -prefix step1/downsampled_target.nii.gz -input $TARGET_IMAGE
-    3dresample -dxyz 1 1 1 -prefix step1/downsampled_moving.nii.gz -input $MOVING_IMAGE
+    3dresample -dxyz $functional_resolution -prefix step1/downsampled_target.nii.gz -input $TARGET_IMAGE
+    3dresample -dxyz $functional_resolution -prefix step1/downsampled_moving.nii.gz -input $MOVING_IMAGE
     ```
 
     From here on out, fixed and moving are the downsampled versions:
