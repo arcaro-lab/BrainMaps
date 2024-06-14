@@ -1,0 +1,35 @@
+
+***COLORS
+  limegreen = limegreen
+  cyan = #00ffff
+  lt-blue2 = #0099ff
+  lt-blue1 = #0069ff
+  blue = #0044ff
+  green = green
+  yellow = #ffff00
+  oran-yell = #ff9900
+  oran-red = #ff4400
+  red = #ff0000
+  yell-oran = #ffcc00
+
+***PALETTES polarangle_bothhemis_symmetric [20]
+  1.000000 -> limegreen
+  0.900000 -> cyan
+  0.800000 -> lt-blue2
+  0.700000 -> lt-blue1
+  0.600000 -> blue
+  0.500000 -> blue
+  0.400000 -> lt-blue1
+  0.300000 -> lt-blue2
+  0.200000 -> cyan
+  0.100000 -> limegreen
+  0.000000 -> green
+  -0.100000 -> yellow
+  -0.200000 -> oran-yell
+  -0.300000 -> oran-red
+  -0.400000 -> red
+  -0.500000 -> red
+  -0.600000 -> oran-red
+  -0.700000 -> oran-yell
+  -0.800000 -> yellow
+  -0.900000 -> green
