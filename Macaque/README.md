@@ -1,17 +1,26 @@
 # Image Registration Script
 
-Below illustrates how to register these functional maps to your monkey's T1 MRI. This exmaple performs image registration and transformation using `flirt` and `antsRegistrationSyN.sh` tools. It downscales the target and moving images to match the resolution of the functional map and applies several transformations. Within Retinotopy, there is an example for aligning the retinotopy maps from NMT to a target image (registerRetino.sh).
+This script performs nonlinear image registration to align a functional retinotopy map to a subject-specific T1-weighted anatomical MRI. It uses AFNI, FSL, and ANTs tools. The script downscales the anatomical images to match the functional resolution and applies a combination of FLIRT and ANTs transformations.
+ 
+Within Retinotopy, there is an example for aligning the retinotopy maps from NMT to a target image (registerRetino.sh).
+
 
 ## Usage
 
 ```
-./script.sh <target_image> [<moving_image>] [<functional_map>]
+./registerRetino.sh <target_image> [<moving_image>] [<functional_map>]
 ```
 
-- `<target_image>`: Path to the target image (your monkey's T1 MRI).
-- `<moving_image>`: Path to the moving image (default: `moving_image.nii.gz`).
-- `<functional_map>`: Path to the functional map (default: `functional_map.nii.gz`).
-- `<functional_resolution>`: Resolution of functional map (default: 1x1x1mm).
+- `<target_image>`: Path to the subject’s T1-weighted anatomical image (default: MPRAGE_SS.nii.gz).
+- `<moving_image>`: Path to the template image the functional map is aligned to (default: NMT_v2.0_sym_SS.nii.gz).
+- `<functional_map>`: Path to the functional retinotopy map in template space (default: AvgRetino_NMT2.0sym.nii.gz).
+
+Output Summary
+
+The script creates the following key outputs:
+- AvgRetino_syn2fixed.nii.gz: The functional map transformed into the subject’s anatomical space.
+- Intermediate steps are saved in step1 through step5 subdirectories for debugging or inspection.
+
 
 ## Steps
 

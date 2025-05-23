@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Usage: script.sh <target_image> [<moving_image>] [<functional_map>]
+# Usage: registerRetino.sh <target_image> [<moving_image>] [<functional_map>]
 
 # Assign input arguments to variables
-TARGET_IMAGE=${1:-MPRAGE_snorlax_SS.nii.gz}
+TARGET_IMAGE=${1:-MPRAGE_SS.nii.gz}
 MOVING_IMAGE=${2:-NMT_v2.0_sym_SS.nii.gz}
 FUNCTIONAL_MAP=${3:-AvgRetino_NMT2.0sym.nii.gz}
 
