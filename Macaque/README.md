@@ -1,6 +1,6 @@
 # Macaque Image Registration 
 
-This script performs nonlinear image registration to align a functional retinotopy map to a subject-specific T1-weighted anatomical MRI. It uses AFNI, FSL, and ANTs tools. The script downscales the anatomical images to match the functional resolution and applies a combination of FLIRT and ANTs transformations.
+This script performs nonlinear image registration to align a functional retinotopy map to a subject-specific T1-weighted anatomical MRI. It uses AFNI, FSL, and ANTs tools. The script downscales the anatomical images to match the functional resolution and applies a combination of FLIRT and ANTs transformations. This script works best if the T1 images are skull stripped.
  
 Within Retinotopy, there is shell script for aligning the retinotopy maps from NMT to a target image (registerRetino.sh).
 
