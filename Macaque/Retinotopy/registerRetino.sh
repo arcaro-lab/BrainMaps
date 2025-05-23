@@ -11,12 +11,15 @@ FUNCTIONAL_MAP=${3:-AvgRetino_NMT2.0sym.nii.gz}
 DOWNSAMPLED_TARGET="downsampled_target.nii.gz"
 DOWNSAMPLED_MOVING="downsampled_moving.nii.gz"
 
+# Clean up old outputs to avoid file conflicts
+rm -rf step1 step2 step3 step4 step5 AvgRetino_syn2fixed.nii.gz
+
 # Create directories for intermediate files
 mkdir -p step1 step2 step3 step4 step5
 
 # Step 1: Downsample both the moving and fixed images to match the resolution of the functional map (1 1 1 mm)
-3dresample -dxyz 1 1 1 -prefix step1/$DOWNSAMPLED_TARGET -input $TARGET_IMAGE
-3dresample -dxyz 1 1 1 -prefix step1/$DOWNSAMPLED_MOVING -input $MOVING_IMAGE
+3dresample -overwrite -dxyz 1 1 1 -prefix step1/$DOWNSAMPLED_TARGET -input $TARGET_IMAGE
+3dresample -overwrite -dxyz 1 1 1 -prefix step1/$DOWNSAMPLED_MOVING -input $MOVING_IMAGE
 
 # From here on out, fixed and moving are the downsampled versions
 FIXED="step1/$DOWNSAMPLED_TARGET"
@@ -37,7 +40,7 @@ antsRegistrationSyN.sh -f $FIXED \
 -d 3 -o step3/moving_syn2fixed -n 4
 
 # Step 4: Resample the functional map to the moving image
-3dresample -master $MOVING -prefix step4/AvgRetino_resamp.nii.gz -input $FUNCTIONAL_MAP
+3dresample -overwrite -master $MOVING -prefix step4/AvgRetino_resamp.nii.gz -input $FUNCTIONAL_MAP
 
 # Step 5: Applies the flirt transform to the resampled functional map using NN interpolation
 flirt -in step4/AvgRetino_resamp.nii.gz \
