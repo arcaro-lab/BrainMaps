@@ -41,5 +41,5 @@ The data are 4D (x, y, z, functional maps) and include the following sub-briks:
 <img src="images/retino_inflated.png" alt="Inflated NMT Cortical Surface" width="50%" />
 
 ## References
-- Arcaro MJ, Pinsk MA, Li X, Kastner S. (2017). The Anatomical and Functional Organization of the Human Visual Pulvinar. Journal of Neuroscience. 37(33): 7863-7874. [PubMed](https://pubmed.ncbi.nlm.nih.gov/28674177/).
+- Arcaro MJ & Livingstone MS (2017). Retinotopic organization of scene areas in the macaque inferior temporal cortex. Journal of Neuroscience. [PubMed](https://pubmed.ncbi.nlm.nih.gov/28674177/).
 - AFNI NMT Templates: [NMT v2.0](https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/nonhuman/macaque_tempatl/template_nmtv2.html), [NMT v1.3](https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/nonhuman/macaque_tempatl/template_nmtv1.html).
