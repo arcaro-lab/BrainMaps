@@ -1,6 +1,6 @@
 # Group Average Body Maps
 
-This repository contains group average body maps identified from Arcaro et al. 2019, PNAS ([PubMed](https://pubmed.ncbi.nlm.nih.gov/31732670/)). The data are provided in both symmetric and asymmetric NMT v2.0 space as well as NMT v1.3 ([AFNI NMT Templates](https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/nonhuman/macaque_tempatl/template_nmtv2.html)).
+This repository contains group average body maps identified from Arcaro et al. 2019, PNAS ([PubMed](https://pubmed.ncbi.nlm.nih.gov/31732670/)). The data are provided in symmetric NMT v2.0 space as well as NMT v1.3 ([AFNI NMT Templates](https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/nonhuman/macaque_tempatl/template_nmtv2.html)).
 
 ## Data Description
 
